@@ -1,13 +1,16 @@
 import React from 'react';
+import styles from './Statistics.module.css';
 
 const Statistics = ({ good, neutral, bad, total, positiveFeedback }) => (
-  // <h3>Statistics</h3>
-  <ul>
-    <li>Good: {good}</li>
-    <li>Neutral: {neutral}</li>
-    <li>Bad: {bad}</li>
-    <li>Total: {total}</li>
-    <li>Positive feedback: {positiveFeedback}%</li>
+  <ul className={styles.statisticList}>
+    <li className={styles.statisticItem}>Good: {good}</li>
+    <li className={styles.statisticItem}>Neutral: {neutral}</li>
+    <li className={styles.statisticItem}>Bad: {bad}</li>
+    <li className={styles.statisticItem}>Total: {total}</li>
+    <li className={styles.statisticItem}>
+      Positive feedback: {positiveFeedback}%
+    </li>
   </ul>
 );
+
 export default Statistics;

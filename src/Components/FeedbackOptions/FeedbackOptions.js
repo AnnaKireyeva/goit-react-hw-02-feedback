@@ -1,20 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './FeedbackOptions.module.css';
 
 const FeedbackOptions = ({ onGood, onNeutral, onBad }) => (
-  <ul>
-    <li>
-      <button type="button" onClick={onGood}>
+  <ul className={styles.feedbackBtnList}>
+    <li className={styles.feedbackBtnItem}>
+      <button className={styles.btn} type="button" onClick={onGood}>
         Good
       </button>
     </li>
-    <li>
-      <button type="button" onClick={onNeutral}>
+    <li className={styles.feedbackBtnItem}>
+      <button className={styles.btn} type="button" onClick={onNeutral}>
         Neutral
       </button>
     </li>
-    <li>
-      <button type="button" onClick={onBad}>
+    <li className={styles.feedbackBtnItem}>
+      <button className={styles.btn} type="button" onClick={onBad}>
         Bad
       </button>
     </li>
