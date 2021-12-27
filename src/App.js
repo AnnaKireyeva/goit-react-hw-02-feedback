@@ -51,6 +51,8 @@ export default class App extends Component {
   };
 
   render() {
+    let total = this.countTotalFeedback();
+    let positiveFeedback = this.countPositiveFeedbackPercentage();
     return (
       <div>
         <Section title={'Please leave feedback'}>
@@ -67,8 +69,8 @@ export default class App extends Component {
               good={this.state.good}
               neutral={this.state.neutral}
               bad={this.state.bad}
-              total={this.countTotalFeedback()}
-              positiveFeedback={this.countPositiveFeedbackPercentage()}
+              total={total}
+              positiveFeedback={positiveFeedback}
             />
           ) : (
             <Notification message={'There is no feedback'} />
